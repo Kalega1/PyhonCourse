@@ -1,37 +1,45 @@
-# coin_number, zero, one= int(input ("Введите число монет:")),0,0
-# while zero+one<coin_number :
-#     n = int(input("Произвольный набор 0/1 ->"))
-#     if n == 0 : zero = zero + 1 
-#     else : one = one +1
-# print(f"Переверните {zero} монет/ы"if zero<one else f"Переверните {one} монет/ы")
+# N = abs(int(input('Введите количество элементов списка А: ')))
+# A_entered = input("Введите через пробел элементы списка: ").split()
+# A_num = list(map(int, A_entered))
+# if len(A_num) != N:
+#     print('Введенные элементы не соответствуют заявленному количеству!')
+# else:
+#     X = int(input('Введите число X, которое необходимо найти в списке: '))
+#     count = 0
+#     for i in range(N):
+#         if A_num[i] == X:
+#             count += 1
+#     print(f'Число {X} встречается в списке A {count} раз') 
 
 
 
-# S = int(input("Введите сумму чисел: "))
-# P = int(input("Введите произведение чисел: "))
-
-# for i in range(1, P+1):  # перебираем все возможные делители числа P
-#     if P % i == 0:
-#         x = i
-#         y = P // i
-#         if x + y == S:  # если сумма равна S
-#             print('X =', x, 'Y =', y)
-#             break
-# else:  # этот блок выполнится, если ни один делитель не подошел
-#     print('Не могу найти числа X и Y')
-
-
-n = int(input("Введите число N: "))
-power_of_two = 1
-while power_of_two <= n:
-    print(power_of_two)
-    power_of_two *= 2
+# N = abs(int(input('Введите количество А: ')))
+# A_entered = input("элементы через проблел: ").split()
+# A_num = list(map(int, A_entered))
+# if len(A_num) != N or N == 0:
+#     print('Введенные элементы не соответствуют заявленному количеству!')
+# else:
+#     X = int(input('Введите число X, с которым необходимо сравнивать элементы списка: '))
+#     min = abs(X - A_num[0])
+#     index = 0
+#     for i in range(1, N):
+#         count = abs(X - A_num[i])
+#         if count < min:
+#             min = count
+#             index = i
+#     print(f'Число {A_num[index]} в списке A наиболее близко по величине к числу {X}, их разница составляет {abs(X - A_num[index])}')
 
 
 
-    
-
-
+rus = {1:'АВЕИНОРСТ',
+      	2:'ДКЛМПУ',
+      	3:'БГЁЬЯ',
+      	4:'ЙЫ',
+      	5:'ЖЗХЦЧ',
+      	8:'ШЭЮ',
+      	10:'ФЩЪ'}
+word = input('Введите слово на русском языке: ').upper()
+print('Вы получили', sum([k for i in word for k, v in rus.items() if i in v]), 'баллов')
 
 
 
