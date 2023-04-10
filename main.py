@@ -1,20 +1,37 @@
-# a = {3, 5, 2, 7, 1}  
-# a.update({1, 2, 3, 4, 5})  
-# print(a)  
+
+# def power(A, B):
+#     if B == 0:
+#         return 1
+#     elif B == 1:
+#         return A
+#     else:
+#         return A * power(A, B-1)
+
+# A = 3
+# B = 5
+# result = power(A, B)
+# print(result) # Output: 243
+
+# A = 2
+# B = 3
+# result = power(A, B)
+# print(result) # Output 8
 
 
-n = int(input("Введите число кустов на грядке: "))
-a = [int(x) for x in input("Введите количество ягод на каждом кусте через пробел: ").split()]
-max_berries = 0
+########################
 
-for i in range(n):
-    berries = a[i]
-    if i > 0:
-        berries += a[i-1]
-    if i < n-1:
-        berries += a[i+1]
-    max_berries = max(max_berries, berries)
 
-print("Максимальное число ягод, которые можно собрать за один заход собирающего модуля:", max_berries)
+def sum(a, b):
+    if b == 0:
+        return a
+    else:
+        return sum(a ^ b, (a & b) << 1)
+
+a = 2
+b = 2
+result = sum(a, b)
+print(result) # Output: 4
+
+
 
 
